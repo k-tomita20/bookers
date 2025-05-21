@@ -38,7 +38,7 @@
 <h1><strong>New Book</strong></h1>
 <% if @book.errors.any? %>
   <div class="error">
-  <h4>Error</h4>
+  <h4>error</h4>
     <ul>
       <% @book.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
