@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+
+
+.buttons {
+  display: flex;
+}
+
+.update {
+  display: flex;
+}
+
+.success {
+  color: green
+}
+
+.error {
+  color: red;
+}

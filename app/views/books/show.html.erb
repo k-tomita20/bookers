@@ -1,7 +1,33 @@
-<h1>Title</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bookers</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+<body>
+<div class = "success">
+<%= flash[:notice] %>
+</div>
+
+
+<p><strong>Title:</strong></p>
 <p><%= @book.title %></p>
 
-<h2>Body</h2>
+
+<p><strong>Body:</strong></p>
 <p><%= @book.body %></p>
 
 
+<p class="buttons">
+  <%= link_to "Edit", edit_book_path(@book.id) %>　|　<%= link_to "Back", books_path %>
+</p>
+
+
+ </body>
+ </html>

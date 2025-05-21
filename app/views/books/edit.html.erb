@@ -1,13 +1,37 @@
-<h1>編集画面</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bookers</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+<body>
+
+<h1>Editing Book</h1>
 
 <%= form_with model: @book do |f| %>
 
-  <h4>Title</h4>
+  <p>Title</p>
   <%= f.text_field :title %>
   
-  <h4>Body</h4>
+  <p>Body</p>
   <%= f.text_area :body %>
 
-  <%= f.submit '保存' %>
-
+  <div class = "update">
+  <%= f.submit 'Update Book' %>
+  </div>
 <% end %>
+
+
+ <p class = "buttons">
+   <%= link_to "Show", book_path(@book.id) %>　|　
+   <%= link_to "Back", books_path %>
+  </p>
+
+ </body>
+ </html>
